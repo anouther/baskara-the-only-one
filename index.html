@@ -1,0 +1,68 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            font-family: "EB Garamond", serif; 
+            animation:none;transition:all .3s ease;}</style>
+    
+    <div id="konten"><div id="foto"><div class="image"><img id="photo" src="15.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+    <div id='slider'>
+  <p>hi &nbsp;<b id="kamu"></b>, aku mau ceritain kamu sosok yang selalu jadi alasan aku tersenyum</p>
+  <p>namanya baskara hehe halo sayangkuu😻❤️. kalau diinget pertemuan awal aku sama dia, aku pengen bilang banyak makasih ke semesta udah pertemuin aku sama sosok sehebat kamu</p> 
+  <p>baskara itu hebat, tau ga kenapa? soalnya dia bisa bikin hal-hal sederhana jadi luar biasa, kadang aku masih ngga percaya kalau aku punya kamu yang selalu dukung aku di saat-saat sulit</p>
+  <p>kamu yang selalu bisa bikin aku ketawa meskipun hari-hari kamu juga ga berjalan begitu baik, makasih ya udah ngutamin kebahagiaan aku.☹️</p> 
+  <p>punya kamu itu kayak punya sahabat dan kekasih dalam satu paket.karna kamu ngerti banget sama mauku? soalnya kadang aku aja susah banget buat ngertiin diri aku sendiri.</p>
+  <p>makasih ya sayangku udah bikin aku ngerasa begitu dicintai,tap love nya ya! <label class='lovein' onClick="duar()">💝</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = "Ingat satu hal, kamu ga sendiri, I'm here to support you, i will be here whatever you need me, you can reply on me okay? Jangan takut untuk berbagi cerita sama aku, jangan takut untuk mengungkapkan semua pikiran negatif kamu, ga usah merasa sungkan ya? I will be 24/7 for you mas ra, ya mungkin tidak akan benar-benar 24/7 hehe, tapi aku bakal mengusahakan sebisaku buat selalu nemenin kamu, karna aku pengen jadi rumah yang nyaman buat kamu. I love you baskaraaa❤️";
+
+        function play() {
+          var audio = new Audio('strawbery.mp3');
+          audio.play();
+        }
+            
+ function bukaWa(){window.location = "https://t.me/haimalaya"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu?',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    finish = finish + ", " + nama + "!";    
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh namanya buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
